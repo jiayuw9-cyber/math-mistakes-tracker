@@ -1,16 +1,13 @@
 import unittest
+import os
+from mistake_manager import add_mistake, load_data, view_mistakes
 
-class MathMistakeTracker:
-    def __init__(self):
-        self.mistakes = []
+Test_file = "mistakes.txt"
 
-    def add_mistake(self, mistake):
-        self.mistakes.append(mistake)
-
-    def get_mistakes(self):
-        return self.mistakes
 class TestMathMistakeTracker(unittest.TestCase):
     def setUp(self):
+        with open(Test_file,"r") as file:
+            file.write("")
         self.tracker = MathMistakeTracker()
 
     def test_add_and_get_mistakes(self):

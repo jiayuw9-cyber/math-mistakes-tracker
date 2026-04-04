@@ -10,13 +10,13 @@ class TestMathMistakeTracker(unittest.TestCase):
             file.write("")
     
     def test_add_mistakes(self):
-        add_mistake("","","", Test_file)
+        add_mistake("1+1","3","2", Test_file)
         data = load_data(Test_file)
 
         self.assertEqual(len(data), 1)
 
     def test_view_mistakes(self):
-        add_mistake("","","", Test_file)
+        add_mistake("1+1","3","2", Test_file)
         data = view_mistakes(Test_file)
 
         self.assertEqual(len(data), 1)

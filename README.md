@@ -9,10 +9,10 @@ Functions:
 Allows the user to input a math problem and save the wrong answer and correct answer.
 This function saves math mistakes into a text file.
 
-3. view_mistakes
+2. view_mistakes
 Displays all stored mistakes for review.
 
-4. quiz
+3. quiz
 Can randomly selects a stored question and quizzes the user.
 
 Example Use Cases:

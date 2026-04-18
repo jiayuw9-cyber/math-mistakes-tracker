@@ -41,3 +41,7 @@ def load_mistakes(filename):
     except FileNotFoundError:
         print ("No file found.")  
     return mistakes   
+
+#3. view_mistakes
+#Displays all stored mistakes for review.
+

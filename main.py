@@ -44,4 +44,13 @@ def load_mistakes(filename):
 
 #3. view_mistakes
 #Displays all stored mistakes for review.
+def view_mistakes(filename):
+    mistakes = load_mistakes(filename)
 
+    if len(mistakes) == 0:
+        print("No mistakes recorded yet.")
+        return
+    
+    print ("Saved Math Mistakes.")
+
+    #for mistakes in ...

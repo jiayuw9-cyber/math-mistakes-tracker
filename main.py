@@ -21,4 +21,23 @@ def add_mistake(filename):
 #Displays all stored mistakes for review.
 def load_mistakes(filename):
     mistakes = []
-    
+
+    try:
+        with open(filename,"r") as file:
+            for line in file:
+                line = line.strip()
+
+                if line == "":
+                    continue
+
+                parts = line.split(" | ")
+
+                if len(parts) == 3:
+                    question = parts[0]
+                    wrong_answer = parts[1]
+                    correct_answer = parts[2]
+                    mistakes.append(question,wrong_answer,correct_answer)
+
+    except FileNotFoundError:
+        print ("No file found.")  
+    return mistakes   

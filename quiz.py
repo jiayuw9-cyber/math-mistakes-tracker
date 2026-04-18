@@ -1,5 +1,5 @@
 import random
-from main import load_mistakes 
+from mistake_manager import load_mistakes 
 
 def quiz_user(filenmae):
     mistakes = load_mistakes(filename)

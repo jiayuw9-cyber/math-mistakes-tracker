@@ -17,8 +17,8 @@ def add_mistake(filename):
     print("Mistakes saved successfully.")
 
 
-#2. view_mistakes
-#Displays all stored mistakes for review.
+#2. load_mistakes
+#Put the data out of file.
 def load_mistakes(filename):
     mistakes = []
 

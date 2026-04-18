@@ -19,3 +19,6 @@ def add_mistake(filename):
 
 #2. view_mistakes
 #Displays all stored mistakes for review.
+def load_mistakes(filename):
+    mistakes = []
+    

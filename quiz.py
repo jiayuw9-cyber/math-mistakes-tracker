@@ -1,7 +1,7 @@
 import random
 from mistake_manager import load_mistakes 
 
-def quiz_user(filenmae):
+def quiz_user(filename):
     mistakes = load_mistakes(filename)
 
     if len(mistakes) == 0:

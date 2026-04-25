@@ -16,6 +16,13 @@ class TestMathMistakeTracker(unittest.TestCase):
         self.assertEqual(len(data), 1)
 
     #def test_load_mistakes(self):
+    def test_load_mistakes(self):
+        add_mistake("1+1","3","2", test_file)
+        data = load_data(test_file)
+
+        self.assertEqual(data[0]["problem"], "1+1")
+        self.assertEqual(data[0]["wrong"], "3")
+        self.assertEqual(data[0]["correct"], "2")
 
 
     def test_view_mistakes(self):

@@ -45,7 +45,8 @@ def quiz_user(filename):
     still_wrong = []
 #just show the question
 #make user print the answer 
-    for i, mistake in range(len(mistakes)):   #????
+    for i in range(len(mistakes)):
+        mistake = mistakes[i]
         question, wrong_answer, correct_answer = mistake
 
         print(f"\nQuestion{i}:{question}")

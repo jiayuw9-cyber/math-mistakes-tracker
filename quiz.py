@@ -9,6 +9,8 @@ def quiz_user(filename):
         return
     
 # Random choose 10 mistakes
+    num_questions = min(10, len(mistakes))
+    selected = random.sample(mistakes, num_questions)
 # split it into three parts
 #just show the question
 #make user print the answer 

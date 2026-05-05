@@ -36,7 +36,7 @@ def load_mistakes(filename):
                     question = parts[0]
                     wrong_answer = parts[1]
                     correct_answer = parts[2]
-                    mistakes.append(question,wrong_answer,correct_answer)
+                    mistakes.append((question, wrong_answer, correct_answer))
 
     except FileNotFoundError:
         print ("No file found.")  
@@ -53,4 +53,11 @@ def view_mistakes(filename):
     
     print ("Saved Math Mistakes.")
 
+    for i, mistakes in range(len(mistakes)):
+        mistake = mistakes[i]
+        question = mistake[0]
+        wrong_answer = mistake[1]
+        correct_answer = mistake[2]
+
+    print(f"\nQuestion {i+1}: {question}")
     

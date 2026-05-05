@@ -3,7 +3,7 @@
 #This function saves math mistakes into a text file.
 def add_mistake(filename):
     question = input("Enter the math problem you got wrong (e.g., 5 + 3): ").strip()
-    wrong_answer = input("Enter the math question:").strip()
+    wrong_answer = input("Enter the wrong answer:").strip()
     correct_answer = input("enter the correct answer:").strip()
 
     if question == "" or wrong_answer == "" or correct_answer == "":
@@ -62,4 +62,6 @@ def view_mistakes(filename):
         print(f"Question: {question}")
         print(f"Your wrong answer: {wrong_answer}")
         print(f"Your correct answer: {correct_answer}")
+
+    return mistakes
     

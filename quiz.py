@@ -78,3 +78,21 @@ def quiz_user(filename):
 
 
 #show the conclusion as a line plot.
+def plot_recent_results():
+    results = load_quiz_results()
+
+    if len(results) == 0:
+        print("No quiz results to plot.")
+        return
+    
+    recent_results = results[-10:]
+
+    x_values = list(range(1,len(recent_results) + 1))
+    y_values = [result * 100 for result in recent_results]
+
+    plt.plot(x_values, y_values, marker = "o")
+    plt.xlabel("Recent Quiz Attempts")
+    plt.ylabel("Accuracy (%)")
+    plt.title("Recent Quiz Accuracy")
+    plt.ylim(0,100)
+    plt.show()

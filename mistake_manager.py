@@ -1,4 +1,3 @@
-
 #1. add_mistake
 #Allows the user to input a math problem and save the wrong answer and correct answer.
 #This function saves math mistakes into a text file.
@@ -53,11 +52,14 @@ def view_mistakes(filename):
     
     print ("Saved Math Mistakes.")
 
-    for i, mistakes in range(len(mistakes)):
+    for i in range(len(mistakes)):
         mistake = mistakes[i]
         question = mistake[0]
         wrong_answer = mistake[1]
         correct_answer = mistake[2]
 
-    print(f"\nQuestion {i+1}: {question}")
+        print(f"\nMistake {i+1}")
+        print(f"Question: {question}")
+        print(f"Your wrong answer: {wrong_answer}")
+        print(f"Your correct answer: {correct_answer}")
     

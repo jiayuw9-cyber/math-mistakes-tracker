@@ -1,12 +1,13 @@
 #1. add_mistake
 #Allows the user to input a math problem and save the wrong answer and correct answer.
 #This function saves math mistakes into a text file.
-def add_mistake(filename):
-    question = input("Enter the math problem you got wrong (e.g., 5 + 3): ").strip()
-    wrong_answer = input("Enter the wrong answer:").strip()
-    correct_answer = input("enter the correct answer:").strip()
+def add_mistake(question, wrong_answer, correct_answer, filename):
 
-    if question == "" or wrong_answer == "" or correct_answer == "":
+    question = question.strip()
+    wrong_answer = wrong_answer.strip()
+    correct_answer = correct_answer.strip()
+
+    if not question or not wrong_answer or not correct_answer:
         print("Error: All fields are required. Please try again.")
         return
 

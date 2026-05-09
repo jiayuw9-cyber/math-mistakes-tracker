@@ -14,8 +14,7 @@ def add():
         messagebox.showerror("Error","All fields required.")
         return
     
-    with open(filename, "a") as f:
-        f.write(q + " | " + w + " | " + c + "\n")
+    add_mistake(q, w, c, filename)
 
     messagebox.showinfo("Success","Saved!")
     entry_q.delete(0, tk.END)
@@ -46,15 +45,15 @@ root = tk.Tk()
 root.title("Math Mistakes Tracker")
 tk.Label(root, text = "Question").pack()
 entry_q = tk.Entry(root, width = 40)
-entry_q.pak()
+entry_q.pack()
 
 tk.Label(root, text = "Wrong Answer").pack()
 entry_w = tk.Entry(root, width = 40)
-entry_w.pak()
+entry_w.pack()
 
 tk.Label(root, text = "Correct Answer").pack()
 entry_c = tk.Entry(root, width = 40)
-entry_c.pak()
+entry_c.pack()
 
 tk.Button(root, text = "Add Mistake", command = add).pack()
 tk.Button(root, text = "View Misakes", command = view).pack()

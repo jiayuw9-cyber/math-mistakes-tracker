@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from mistake_manager import add_mistake, load_mistakes
-from quiz import quiz_user
+import random
 
 filename = "mistakes.txt"
 
@@ -37,7 +37,28 @@ def view():
         text.insert(tk.END, f"{i+1}. {q} | Wrong: {w} | Correct: {c}\n")
 
 def quiz():
-    quiz_user(filename)
+    mistakes = load_mistakes(filename)
+    if len(mistakes) == 0:
+        messagebox.showinfo("Quiz","No mistakes to quiz.")
+        return
+    
+    question, wrong, correct = random.choice(mistakes)
+    quiz_window = tk.Toplevel(root)
+    quiz_window.title("Quiz")
+
+    tk.Label(quiz_window, text = question).pack()
+    entry_q = tk.Entry(quiz_window, width = 40)
+    entry_q.pack()
+
+    def check():
+        user_answer = entry_q.get().strip()
+        if user_answer == correct.strip():
+            messagebox.showinfo("Result","Correct!")
+        else:
+            messagebox.showinfo("Result",f"Wrong. Correct answer: {correct}")
+
+    quiz_window.destroy()
+    tk.Button(quiz_window, text = "Submit", command = check).pack()
 
 
 #set up the window

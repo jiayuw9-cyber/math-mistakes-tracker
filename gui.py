@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 from mistake_manager import add_mistake, load_mistakes
 import random
-from quiz import plot_recent_result
+from quiz import plot_recent_results
 filename = "mistakes.txt"
 
 def add():
@@ -79,7 +79,7 @@ entry_c.pack()
 tk.Button(root, text = "Add Mistake", command = add).pack()
 tk.Button(root, text = "View Misakes", command = view).pack()
 tk.Button(root, text = "Quiz", command = quiz).pack()
-tk.Button(root, text="Plot Results", command=plot_recent_result).pack()
+tk.Button(root, text="Plot Results", command=plot_recent_results).pack()
 
 text = tk.Text(root, height = 10, width = 50)
 text.pack()

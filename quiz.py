@@ -2,7 +2,7 @@ import random
 from mistake_manager import load_mistakes 
 import matplotlib.pyplot as plt
 
-result_file = "quiz_result"
+result_file = "quiz_result.txt"
 # split it into three parts
 def save_mistakes(filename, mistakes):
     with open(filename, "w") as file:
@@ -45,8 +45,8 @@ def quiz_user(filename):
     still_wrong = []
 #just show the question
 #make user print the answer 
-    for i in range(len(mistakes)):
-        mistake = mistakes[i]
+    for i in range(len(selected)):
+        mistake = selected[i]
         question, wrong_answer, correct_answer = mistake
 
         print(f"\nQuestion{i}:{question}")

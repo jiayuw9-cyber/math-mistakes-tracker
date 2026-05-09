@@ -57,7 +57,7 @@ def quiz():
         else:
             messagebox.showinfo("Result",f"Wrong. Correct answer: {correct}")
 
-    quiz_window.destroy()
+        quiz_window.destroy()
     tk.Button(quiz_window, text = "Submit", command = check).pack()
 
 

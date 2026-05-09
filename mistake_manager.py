@@ -32,9 +32,9 @@ def load_mistakes(filename):
                 parts = line.split(" | ")
 
                 if len(parts) == 3:
-                    question = parts[0]
-                    wrong_answer = parts[1]
-                    correct_answer = parts[2]
+                    question = parts[0].strip()
+                    wrong_answer = parts[1].strip()
+                    correct_answer = parts[2].strip()
                     mistakes.append((question, wrong_answer, correct_answer))
 
     except FileNotFoundError:

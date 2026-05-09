@@ -25,7 +25,7 @@ def view():
     mistakes = load_mistakes(filename)
     text.delete("1.0", tk.END)
 
-    if not mistakes:
+    if len(mistakes) == 0:
         text.insert(tk.END, "No mistakes.\n")
         return
     

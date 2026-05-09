@@ -1,6 +1,5 @@
 import random
 from mistake_manager import load_mistakes 
-import matplotlib.pyplot as plt
 
 result_file = "quiz_result.txt"
 # split it into three parts

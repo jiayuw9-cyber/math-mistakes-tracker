@@ -2,7 +2,7 @@ import unittest
 import os
 from mistake_manager import add_mistake, load_mistakes, view_mistakes
 
-test_file = "mistakes.txt"
+test_file = "test_mistakes.txt"
 
 class TestMathMistakeTracker(unittest.TestCase):
     def setUp(self):    # I did setup instead of setUp, but it is not working, so I do the dubugging here using chatgpt.

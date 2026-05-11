@@ -21,10 +21,11 @@ Make sure you have python installed on your computer.
 How to Run:
 [IMPORTANT] Run gui.py instead of run the test_file.py.
 
-            Run test_file.py can just test the core functions work or not.
+Run test_file.py can just test the core functions work or not.
 
-Example
+Example:
 Example of stored data in mistakes.txt.
+
 1+1 | 3 | 2
 
 4 + 5 = ? | 3 | 9

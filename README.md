@@ -13,16 +13,28 @@ This function saves math mistakes into a text file.
 Displays all stored mistakes for review.
 
 3. quiz
-Can randomly selects a stored question and quizzes the user.
+Randomly selects a stored question and quizzes the user.
 
-Example Use Cases:
-Review their math mistakes to make sure they have managed to do them.
-Keep track on the types students often get wrong.
-Make the mistakes together into a quiz as a kind of practice exam.
+Installation:
+Make sure you have python installed on your computer.
+
+How to Run:
+[IMPORTANT] Run gui.py instead of run the test_file.py.
+            Run test_file.py can just test the core functions work or not.
+
+Example
+Example of stored data in mistakes.txt.
+1+1 | 3 | 2
+4 + 5 = ? | 3 | 9
+15 + 27 = ? | 40 | 42  
 
 Input Data Format:
-The program will use a text file for example mistakes.txt to store data as it is more conveinient for every one to do that.
-All values are read as strings when loaded from the text file.
-Each mistake should be stored on a seperate line.
-For example:
+The program uses a text file (mistakes.txt) to store data.
+Each line follows this format:
 question | wrong_answer | correct_answer
+All values are store as strings whn loaded from the file.
+
+Example Use Cases:
+1. Students can review their mistakes to improve accuracy.
+2. Teachers can track common errors made by students.
+3. Users can generate quizzes from past mistakes for practice.

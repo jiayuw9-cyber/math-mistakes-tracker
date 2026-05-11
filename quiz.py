@@ -18,7 +18,6 @@ def quiz_user(filename):
     num_questions = min(10, len(mistakes))
     selected = random.sample(mistakes, num_questions)
 
-    score = 0
     still_wrong = []
 
     for i in range(len(selected)):
@@ -30,12 +29,10 @@ def quiz_user(filename):
 
         if user_answer == correct_answer.strip():
             print("Correct!")
-            score += 1
         else:
             print(f"Wrong. Correct answer: {correct_answer}")
             still_wrong.append(mistake)
 
-#keep mistakes which were not seected and the selected questions that are still wrong.
     not_selected = []
 
     for mistake in mistakes:

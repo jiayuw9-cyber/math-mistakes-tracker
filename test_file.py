@@ -1,5 +1,4 @@
 import unittest
-import os
 from mistake_manager import add_mistake, load_mistakes, view_mistakes
 
 test_file = "test_mistakes.txt"

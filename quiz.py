@@ -1,32 +1,11 @@
 import random
 from mistake_manager import load_mistakes 
 
-result_file = "quiz_result.txt"
 # split it into three parts
 def save_mistakes(filename, mistakes):
     with open(filename, "w") as file:
         for question, wrong_answer, correct_answer in mistakes:
             file.write(question + " | " + wrong_answer + " | " + correct_answer + "\n")
-
-def save_quiz_result(accuracy):
-    with open(result_file,"a") as file:
-            file.write(str(accuracy) + "\n")
-# ensure save in result_file
-
-def load_quiz_results():
-    results = []
-
-    try:
-         with open(result_file, "r") as file:
-              for line in file:
-                   line = line.strip()
-                   if line != "":
-                        results.append(float(line))
-
-    except FileNotFoundError:
-         return[]
-    
-    return results
 
 
 def quiz_user(filename):
@@ -35,15 +14,13 @@ def quiz_user(filename):
     if len(mistakes) == 0:
         print("There are no mistakes to quiz.")
         return
-    
-# Random choose 10 mistakes
+
     num_questions = min(10, len(mistakes))
     selected = random.sample(mistakes, num_questions)
 
     score = 0
     still_wrong = []
-#just show the question
-#make user print the answer 
+
     for i in range(len(selected)):
         mistake = selected[i]
         question, wrong_answer, correct_answer = mistake
@@ -68,10 +45,4 @@ def quiz_user(filename):
     updated_mistakes = not_selected + still_wrong
     save_mistakes(filename, updated_mistakes)
 
-    accuracy = score / num_questions
-    save_quiz_result(accuracy)
-
     print("\nQuiz finished!")
-    print(f"Score: {score}/{num_questions}")
-    print(f"Accuracy: {accuracy * 100:.2f}%")
-    print("The question you answered correctly has already remved from the mistakes list!")

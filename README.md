@@ -1,5 +1,7 @@
 Math Mistakes Tracker
+
 Project Discription: 
+
 The program will allow users to record math problems they got wrong and review them later. 
 Users can store the question, their incorrect answer, and the correct answer. 
 The program will also include a quiz function that can randomly selects recorded mistakes. 
@@ -15,8 +17,10 @@ Displays all stored mistakes for review.
 3. quiz
 Randomly selects a stored question and quizzes the user.
 
+
 Installation:
 Make sure you have python installed on your computer.
+
 
 How to Run:
 [IMPORTANT] Run gui.py instead of run the test_file.py.

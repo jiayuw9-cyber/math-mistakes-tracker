@@ -1,8 +1,8 @@
 #import
 from mistake_manager import add_mistake, view_mistakes
-from quiz import quiz_user, plot_recent_results
+from quiz import quiz_user
 
-filename = "mistakes.txt" ##??
+filename = "mistakes.txt"
 
 #show menu
 def main():
@@ -11,8 +11,7 @@ def main():
             print("1. Add mistakes")
             print("2. View mistakes")
             print("3. Quiz yourself")
-            print("4. Plot recent quiz results")
-            print("5. Quit")
+            print("4. Quit")
 
             choice = input("Choose an option:")
 
@@ -26,14 +25,10 @@ def main():
                   quiz_user(filename)
 
             elif choice == "4":
-                  plot_recent_results()
-
-            elif choice == "5":
                   print("End.")
                   break
             else:
-                  print("Invalid choice. Plz write the number 1, 2, 3, 4, 5.")
-
+                  print("Invalid choice. Plz write the number 1, 2, 3, 4.")
 
 if __name__ == "__main__":
       main()

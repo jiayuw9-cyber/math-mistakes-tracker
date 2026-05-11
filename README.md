@@ -38,9 +38,13 @@ Example of stored data in mistakes.txt.
 
 
 Input Data Format:
+
 The program uses a text file (mistakes.txt) to store data.
+
 Each line follows this format:
+
 question | wrong_answer | correct_answer
+
 All values are store as strings whn loaded from the file.
 
 Example Use Cases:

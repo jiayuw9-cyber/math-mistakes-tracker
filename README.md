@@ -32,7 +32,7 @@ Make sure you have python installed on your computer.
 ---
 
 ## How to Run:
-[IMPORTANT] Run gui.py instead of run the test_file.py is recommanded.
+Run gui.py is recommended.
 
 Run GUI version:
 
@@ -62,7 +62,7 @@ Example of stored data in mistakes.txt.
 
 ## Input Data Format
 
-The program uses a text file (mistakes.txt) to store data.
+The program uses a text file (mistakes.txt) to stored data.
 
 Each line follows this format:
 
@@ -70,7 +70,7 @@ Each line follows this format:
 question | wrong_answer | correct_answer
 ```
 
-All values are store as strings whn loaded from the file.
+All values are store as strings when loaded from the file.
 
 ---
 

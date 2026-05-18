@@ -76,7 +76,7 @@ entry_c = tk.Entry(root, width = 40)
 entry_c.pack()
 
 tk.Button(root, text = "Add Mistake", command = add).pack()
-tk.Button(root, text = "View Misakes", command = view).pack()
+tk.Button(root, text = "View Mistakes", command = view).pack()
 tk.Button(root, text = "Quiz", command = quiz).pack()
 
 text = tk.Text(root, height = 10, width = 50)

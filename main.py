@@ -16,8 +16,17 @@ def main():
             choice = input("Choose an option:")
 
             if choice == "1":
-                  add_mistake(filename)
-
+                  question = input("Enter the math problem: ")
+                  wrong_answer = input("Enter your wrong answer: ")
+                  correct_answer = input("Enter the correct answer: ")
+                  
+                  add_mistake(
+                        question,
+                        wrong_answer,
+                        correct_answer,
+                        filename
+                  )
+                  
             elif choice == "2":
                   view_mistakes(filename)
 

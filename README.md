@@ -13,6 +13,34 @@ The program also includes a quiz function that can randomly selects recorded mis
 
 ---
 
+## Code Structure
+
+### gui.py  
+GUI version of the project.  
+Allows users to add mistakes, view mistakes, and complete quizzes using tkinter.
+
+### main.py  
+Provides a text-based menu for adding mistakes, viewing mistakes, and taking quizzes.
+
+### mistake_manager.py  
+Handles all mistake management functions including:
+- adding mistakes
+- loading mistakes
+- viewing mistakes
+- saving mistakes to the text file
+
+### quiz.py  
+Contains the quiz system logic.  
+Randomly selects questions from the mistake list and removes correctly answered questions from the file.
+
+### test_file.py  
+Unit testing file using unittest.  
+
+### mistakes.txt  
+Stores all saved math mistakes.
+
+---
+
 ## Functions
 
 ### add_mistake

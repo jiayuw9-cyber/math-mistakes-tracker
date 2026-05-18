@@ -24,10 +24,10 @@ Provides a text-based menu for adding mistakes, viewing mistakes, and taking qui
 
 ### mistake_manager.py  
 Handles all mistake management functions including:
-- adding mistakes
-- loading mistakes
-- viewing mistakes
-- saving mistakes to the text file
+1. adding mistakes
+2. loading mistakes
+3. viewing mistakes
+4. saving mistakes to the text file
 
 ### quiz.py  
 Contains the quiz system logic.  
